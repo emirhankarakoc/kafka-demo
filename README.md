@@ -29,6 +29,6 @@ bin/kafka-server-start.sh config/controller.properties
 bin/kafka-server-start.sh config/broker.properties
 
 sonra da java uygulamasini baslat , olacaktir. 
-eger bu projeyi deniyorsan , 127.0.0.1:8080/rest/api/produceMsg?message=araba istegine chromeden gitmeye calisirsan , ekranda OK gorursun. java konsolunda da mesaji gorursun. 
+eger bu projeyi deniyorsan , 127.0.0.1:8080/rest/api/producerMsg?message=araba istegine chromeden gitmeye calisirsan , ekranda OK gorursun. java konsolunda da mesaji gorursun. 
 
 
