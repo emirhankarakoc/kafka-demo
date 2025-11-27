@@ -9,27 +9,27 @@ ne yapacagiz, genel anlatim.
 
 
 cluster id uretmek: (kafkanin dosyasina girdikten sonra, terminale su kodu yapistirin.)
-bin/kafka-storage.sh random-uuid
+`bin/kafka-storage.sh random-uuid`
  örnek çıktı: AbCDefGhIjKlMnOpQrStUv
 
 controller formatlamak (standalone argumentini koymak zorunluymus)
-bin/kafka-storage.sh format \
+`bin/kafka-storage.sh format \
   -t AbCDefGhIjKlMnOpQrStUv \
   -c config/controller.properties \
-  --standalone
+  --standalone`
 
 broker icin de aynisi , standalone yok.
-bin/kafka-storage.sh format \
+`bin/kafka-storage.sh format \
   -t AbCDefGhIjKlMnOpQrStUv \
-  -c config/broker.properties
+  -c config/broker.properties`
 
 
 bu adimdan sonra sadece calistirmak kaldi. once controller sonra broker
-bin/kafka-server-start.sh config/controller.properties
-bin/kafka-server-start.sh config/broker.properties
+`bin/kafka-server-start.sh config/controller.properties`
+`bin/kafka-server-start.sh config/broker.properties`
 
 sonra da java uygulamasini baslat , olacaktir. 
-eger bu projeyi deniyorsan , 127.0.0.1:8080/rest/api/producerMsg?message=araba istegine chromeden gitmeye calisirsan , ekranda OK gorursun. java konsolunda da mesaji gorursun. 
+eger bu projeyi deniyorsan , `127.0.0.1:8080/rest/api/producerMsg?message=araba` istegine chromeden gitmeye calisirsan , ekranda OK gorursun. java konsolunda da mesaji gorursun. 
 
 
 macos icin ekstra ayarlar:
@@ -56,8 +56,8 @@ bu sayede , macbook kullandiginiz zaman her seferinde cluster id resetlemek zoru
 
 # CALISTIRMA
 (2 farkli terminal ile kafkanin klasorune girin.)
-bin/kafka-server-start.sh config/controller.properties
-bin/kafka-server-start.sh config/broker.properties
+`bin/kafka-server-start.sh config/controller.properties`
+`bin/kafka-server-start.sh config/broker.properties`
 
 iki farkli terminalde acin. 
 
